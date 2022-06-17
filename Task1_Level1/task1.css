@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-sarif;
+}
+
+section{
+    position: relative;
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(Bg6.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 45px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+header .logo{
+   color: #fff;
+   background: #226A80;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 35px;
+   letter-spacing: 2px;
+   padding: 12px 40px;
+   border-radius: 7px;
+ }
+
+ header .navigation a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-image: linear-gradient(#226A80 40%, #226A80 60%);
+    transition: 0.5s;
+    transition-property: background;
+ }
+
+ header .navigation a :not(:last-child){
+   margin-right: 30px;  
+}
+
+ header .navigation a:hover{
+   background: rgb(136, 32, 32);
+   text-decoration: underline;
+}
+
+ .content{
+    max-width: 1500px;
+    margin: 60px 100px;
+ }
+
+ .content .info h3{
+    color: #226A80;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.content .info h3 span{
+   color: rgb(136, 32, 32);
+   font-size: 40px;
+   font-weight: 600;
+}
+
+.content .info p{
+   font-size: 20px;
+   font-weight: 500px;
+   margin-bottom: 70px;
+}
+
+.content .info-btn{
+   color: #fff;
+   background: #226A80;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+   padding: 10px 15px;
+   border-radius: 5px;
+   margin:0px 20px;
+}
+
+.content .info-btn:hover{
+   background: rgb(136, 32, 32);
+   text-decoration: underline;
+}
+
+.content .contact-btn{
+   color: #fff;
+   background: #226A80;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+   padding: 10px 15px;
+   border-radius: 5px;
+   margin: 10px 20px;
+}
+
+.content .contact-btn:hover{
+   background: rgb(136, 32, 32);
+   text-decoration: underline;
+   
+}
+.media-icons{
+   display:flex;
+   justify-content: center;
+   align-items:center;
+   margin: auto;
+}
+
+.media-icons a:not(:last-child){
+   margin-right: 60px;
+}
+
+.media-icons a:hover{
+   transform: scale(1.5);
+}
+
+label{
+   display: none;
+}
+
+#check{
+   z-index: 3;
+   display: none
+}
+
+/* Responsive styles */
+@media(max-width: 960px){
+   header .navigation{
+      display: none;
+   }
+   label{
+      display: block;
+      font-size: 25px;
+      cursor: pointer;
+   }
+   label .hover{
+      color: rgb(136, 32, 32);
+   }
+
+   label .close-btn{
+      display: none;
+   }
+
+   #check:checked ~ header .navigation{
+      z-index: 2;
+      position: fixed;
+      background: rgba(114, 223, 255, 0.9);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;  
+   }
+
+   #check:checked ~ header .navigation a{
+      font-weight: 700;
+      margin-right: 0;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+   }
+
+   #check:checked ~ header label .menu-btn{
+      display: none;
+   }
+
+   #check:checked ~ header label .close-btn{
+      z-index: 2;
+      display: block;
+      position: fixed;
+   }
+
+   label .menu-btn{
+      position: absolute;
+   }
+
+   header .logo{
+      position: absolute;
+      bottom: -6px;
+   }
+
+   .content .info h3{
+      font-size: 45px;
+      line-height: 50px;
+   }
+   
+   .content .info h3 span{
+      font-size: 14px;
+      font-weight: 600;
+   }
+
+   .content .info p{
+      font-size: 14px;
+   }
+}
+
+@media (max-width: 560px){
+   .content .info h3{
+      font-size: 35px;
+      line-height: 40px;
+   }
+   
+   .content .info h3 span{
+      font-size: 30px;
+      font-weight: 600;
+   }
+
+   .content .info p{
+      font-size: 14px;
+   }
+}
