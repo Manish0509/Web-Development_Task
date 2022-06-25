@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 2.5px;
+    font-family: "Mochiy Pop P One", sans-serif;
+}
+  
+body {
+    background: url(Bg-weather.jpg);
+    color: rgba(0, 0, 0, 0.788);
+    display: flex;
+    justify-content: center;
+    margin: 7rem;
+}
+  
+.container {
+    height: 55vh;
+    width: 65vw;
+    background-image: linear-gradient(#e8e8ec 40%,rgb(238, 157, 231) 60%);
+    box-shadow: 2px -2px 70px rgba(0, 0, 0, 0.836);
+    border-radius: 15px;
+}
+  
+.container h1 {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: rgba(0, 0, 0, 0.788);
+    animation: example 5s linear 1s infinite alternate;
+}
+  
+@keyframes example {
+    from {
+        padding-left: 50px;
+        color: #06ce20;
+    }
+    to {
+        padding-right: 50px;
+        color: #f10000;
+      }
+}
+  
+.display {
+    display: flex;
+    justify-content: center;
+}
+  
+#sub {
+    margin: 20px;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+}
+  
+#sub:hover {
+    box-shadow: 1px 2px 20px yellow;
+    background-color: #f9004d;
+    color: white;
+}
+
+#result{
+    font-size: 40px;
+    color: darkblue;
+}
