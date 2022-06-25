@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="task3.css">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="display">
+            <p><b>Enter the value for which you want temperature conversion : </b></p><br />
+            <p>
+                <form id="units">
+                    <input type="number" id="temp"><br><b> Temperature in : </b>
+                    <fieldset>
+                    <input type="radio" name="Temp" id="c" value="c" checked><label for="c">Celsius (°C)</label>
+                    <input type="radio" name="Temp" id="f" value="f"><label for="f">Fahrenheit (°F)</label>
+                    </fieldset>
+                    <input type="submit" id="sub" value="Convert">
+                <form>
+            </p>
+            <p id="result"></p>
+        </div>
+    </div>
+    
+    <script src="Level1_task3.js"></script>
+</body>
+</html>
